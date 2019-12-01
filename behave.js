@@ -4,14 +4,20 @@ let moveImage = document.getElementById("move-image");
 let tracker = 'thanksgiving';
 let ww = window.innerWidth;
 let iw = moveImage.width;
-let centerPos = (ww/2) - (iw/2);
-
-moveImage.style.left = centerPos;
+/*
+const myBox = document.querySelector("h1");
+document.addEventListener('keydown', function(event) {
+  if (event.keyCode == '38') {
+    myBox.style.top = myBox.getBoundingClientRect().top - 5 + 'px'; // parse the string to number, subtract 5, and add 'px'
+    console.log(myBox.style.top);
+  }
+});
+*/
 
 const squareMove = () => {
-    setTimeout(() => { moveImage.style.left = "400px";}, 1000);
+    setTimeout(() => { moveImage.style.left = moveImage.getBoundingClientRect().left + 200 + 'px';}, 1000);
     setTimeout(() => { moveImage.style.top = "200px";}, 2000);
-    setTimeout(() => { moveImage.style.left = "200px";}, 3000);
+    setTimeout(() => { moveImage.style.left = moveImage.getBoundingClientRect().left - 200 + 'px';}, 3000);
     setTimeout(() => { moveImage.style.top = "0px";}, 4000);
 }
 
