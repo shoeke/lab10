@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+}
+
+body {
+    background: url("https://i.pinimg.com/originals/a1/98/e3/a198e34c1f23c5817f178f9192fdd163.jpg");
+    background-position: center;
+    background-size: cover;
+}
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Patua One', cursive;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 20px auto;
+
+}
+p {
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 20px auto 40px;
+    width: 50%;
+}
+.floating-image {
+    position: relative;
+}
+
+#move-image {
+    position: absolute;
+    left: 200px;
+    top: 0;
+    border: 4px solid white;
+    width: 400px;
+    height: 300px;
+  }
+}
