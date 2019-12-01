@@ -1,6 +1,12 @@
 
 
 let moveImage = document.getElementById("move-image");
+let tracker = 'thanksgiving';
+let ww = window.innerWidth;
+let iw = moveImage.width;
+let centerPos = (ww/2) - (iw/2);
+
+moveImage.style.left = centerPos;
 
 const squareMove = () => {
     setTimeout(() => { moveImage.style.left = "400px";}, 1000);
@@ -17,9 +23,25 @@ const imageSwapOut = () => {
     }
 
 
+
+
+
+
+
+const imageSwapTest = () => {
+    if (tracker === 'thanksgiving') {
+        moveImage.src = "images/swap2.jpg";
+        moveImage.style.border = "4px solid black";
+        tracker = 'belsnickle';
+
+    } else {
+        moveImage.src = "images/swap1.jpg";
+        moveImage.style.border = "4px solid white";
+        tracker = 'thanksgiving';
+    }
+}
+
+
 setInterval(() => {squareMove()}, 4000);
-setInterval(() => {imageSwapOut()}, 4000);
+setInterval(() => {imageSwapTest()}, 4000);
 
-
-
-// toggle fade?
